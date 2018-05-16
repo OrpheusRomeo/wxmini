@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::group(['namespace' => 'Api', 'prefix' => 'api'], function() {
     // User
     Route::get('/index', 'UserController@getUserInfo');
+    Route::get('/coupons', 'CouponController@getUserCoupons');
 
     // Article
     Route::get('/articlelist', 'ArticleController@getList'); 
@@ -29,6 +30,10 @@ Route::group(['namespace' => 'Api', 'prefix' => 'api'], function() {
     // Comment
     Route::get('/comments', 'CommentsController@getComments');
 
+    // Product
+    Route::get('/productlist', 'ProductController@getList');
+
+
     // Category
     Route::get('/getcategorylist', 'CategoryController@getCategory');
     Route::get('/addcategory', 'CategoryController@addCategory');
@@ -36,7 +41,8 @@ Route::group(['namespace' => 'Api', 'prefix' => 'api'], function() {
     Route::get('/deletecategory', 'CategoryController@delCategory');
 
     // Error
-    Route::get('/error/{errorCode}', 'ErrorController@getErrorPage');
+    //Route::get('/error/{errorCode}', 'ErrorController@getErrorPage');
+    Route::get('/error/{errorCode}', 'ErrorController@getErrorJson');
 });
 
 

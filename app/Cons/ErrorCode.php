@@ -16,6 +16,8 @@ class ErrorCode
 
     // 用户类 1XX
     const ERRNUM_USER_INFO_ERROR = 101;
+    const ERRNUM_USERID_NOEXIST = 102;
+
 
     // 文章类 2XX
     const ERRNUM_ARTICLE_NOT_FOUND = 201; 
@@ -37,6 +39,7 @@ class ErrorCode
 
     // user
     const SHOW_ERRNUM_USER_INFO_ERROR = [self::ERRNUM_USER_INFO_ERROR, '用户信息错误'];
+    const SHOW_ERRNUM_USERID_NOEXIST = [self::ERRNUM_USERID_NOEXIST, '用户id错误'];
     
     // article
     const SHOW_ERRNUM_ARTICLE_NOT_FOUND = [self::ERRNUM_ARTICLE_NOT_FOUND, '文章不存在或已被删除'];
