@@ -13,4 +13,12 @@ class UserController extends Controller
 
         return $user; 
     }
+
+    public function reg(){
+    
+    }
+
+    public function modify(){
+    
+    }
 }
